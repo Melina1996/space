@@ -24,15 +24,27 @@ export default function Details() {
 
     <div className='bg-bgDestination bg-cover w-screen h-screen'>
 
-        <Navbar />
+        <div className='h-[20%]'>
 
-        <div className='flex items-center justify-center'>
+            <Navbar />
+
+        </div>
+
+        <div className='h-[10%] flex justify-center items-center'>
+
+            <div className='w-[80%] flex justify-start items-center'>
+
+                <h1 className='text-[28px] text-white font-barlow tracking-widest'><span className='text-[#808080]'>01</span> PICK YOUR DESTINATION</h1>
+
+            </div>
+
+        </div>
+
+        <div className='flex items-center justify-center h-[70%]'>
 
             <div className='w-[50%] flex flex-col justify-center items-center'>
 
                 <div className='flex flex-col flex-start gap-10'>
-
-                    <h1 className='text-[25px] text-white'><span className='text-[#808080]'>01</span> PICK YOUR DESTINATION</h1>
 
                     <img src={imagePath} className='w-[400px] h-[400px]' alt="" />
 
@@ -46,20 +58,20 @@ export default function Details() {
 
                     <NavDestinations />
 
-                    <h1 className='text-[100px]'>{planet.name.toUpperCase()}</h1>
+                    <h1 className='text-[100px] font-nanum'>{planet.name.toUpperCase()}</h1>
 
                 </div>
                 
 
-                <p>{planet.description}</p>
+                <p className='h-[120px]'>{planet.description}</p>
 
                 <hr className="w-[100%] h-[2px] mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-white"/>
 
                 <div className='flex flex-col justify-center items-center gap-2'>
 
-                    <p className='text-[13px]'>EST. TRAVEL TIME</p>
+                    <p className='text-[15px] font-barlow'>EST. TRAVEL TIME</p>
 
-                    <p className='text-[20px]'>{planet.travel.toUpperCase()}</p>
+                    <p className='text-[22px] font-nanum'>{planet.travel.toUpperCase()}</p>
 
                     <p>{planet.images.type}</p>
 

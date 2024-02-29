@@ -22,11 +22,6 @@ export default function NavDestinations() {
                                 >
                                 {element.name.toUpperCase()}
                                 </NavLink>
-                        
-
-                            {/* andere VARIANTE mit useLocation() */}
-                            {/* Erklärung: sende path & FALLS property "details" im Object existiert, dann sende ich den entsprechenden "details"-Value */}
-                            {/* <Link to={{pathname : '/details', search:`?details=${element.details}`}}>{element.name}</Link> */}
                         </div>
                     );
                 })}

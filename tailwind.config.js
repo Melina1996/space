@@ -13,8 +13,12 @@ export default {
       "bgCrew": "url('./assets/img/background-crew-desktop.jpg')",
       "bgTech": "url('./assets/img/background-technology-desktop.jpg')",
     },
+    fontFamily:{
+      nanum: ["Nanum Myeongjo","serif"],
+      barlow: ["Barlow Semi Condensed","sans-serif"]
+
+    }
   },
   },
   plugins: [require("daisyui",'flowbite/plugin')],
 }
-

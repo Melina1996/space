@@ -4,7 +4,7 @@ import Star from "../img/logo.svg"
 
 export default function Navbar() {
   return (
-    <div className='flex justify-between items-center h-[150px] pl-5'>
+    <div className='flex justify-between items-center h-[150px] pl-10 font-barlow text-lg'>
 
         <img src={Star} className='w-[50px] h-[50px]' alt="star"/>
 
@@ -12,7 +12,7 @@ export default function Navbar() {
 
         {/* use "NavLink" in order to get active state and change style correspondingly */}
         <div className='w-[900px] nav-bg pt-8 pb-8 relative shadow-lg'>
-            <nav id="my-nav" className="text-md">
+            <nav id="my-nav">
                 <ul className="flex gap-12 justify-center items-center">
                 <li className="hover:text-[#808080] text-white">
                     {/* we use Link-Tag instead of "a" */}
