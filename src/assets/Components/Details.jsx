@@ -30,9 +30,12 @@ export default function Details() {
 
             <div className='w-[50%]'>
 
-                <h1 className='text-[25px] text-white'>01 PICK YOUR DESTINATION</h1>
+                <h1 className='text-[25px] text-white'><span className='text-[#808080]'>01</span> PICK YOUR DESTINATION</h1>
 
-                <img src={planet.images.png} className='w-[40px] h-[40px]' alt="" />
+                <img src={                 
+                    new URL(`../assets/img/destination/${planet.images.png}`, import.meta.url)
+                      .href
+                  } className='w-[40px] h-[40px]' alt="" />
 
             </div>
 
