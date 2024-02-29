@@ -16,6 +16,11 @@ body {
   padding-bottom: 33px;
 }
 
+#my-nav-burger a.active {
+  border-bottom-width: 3px;
+  border-color: black;
+}
+
 #nav-destination a.active {
   border-bottom-width: 3px;
   padding-bottom: 5px;

@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 
 export default function Home() {
   return (
-    <div className='bg-bgHome w-screen h-screen'>
+    <div className='bg-bgHome w-[100vw] h-[100vh]'>
 
         <Navbar />
 

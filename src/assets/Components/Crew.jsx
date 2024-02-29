@@ -8,7 +8,7 @@ export default function Crew() {
 
   return (
 
-    <div className='bg-bgCrew bg-cover w-screen h-screen'>
+    <div className='bg-bgCrew bg-cover w-[100vw] h-[100vh]'>
                 
         <div className='h-[20%]'>
 

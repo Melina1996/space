@@ -5,7 +5,7 @@ import NavDestinations from './NavDestinations'
 
 export default function Destination() {
   return (
-    <div className='bg-bgDestination bg-cover w-screen h-screen'>
+    <div className='bg-bgDestination bg-cover w-[100vw] h-[100vh]'>
 
         <Navbar />
 
@@ -19,7 +19,7 @@ export default function Destination() {
 
                 <NavDestinations />
                 
-                
+
             </div>
 
 
