@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+}
+
+.nav-bg{
+  background: rgba(255,255,255,0.1);
+}
+
+/* allows me to change style when link is active */
+#my-nav a.active {
+  border-bottom-width: 3px;
+  padding-bottom: 33px;
+}
+
+#nav-destination a.active {
+  border-bottom-width: 3px;
+  padding-bottom: 5px;
+}
+
