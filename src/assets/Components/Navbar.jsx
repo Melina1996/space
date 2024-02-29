@@ -19,8 +19,8 @@ export default function Navbar() {
                     <NavLink exact="true" to={`/`}>00 HOME</NavLink>
                 </li>
                 <li className="hover:text-[#808080] text-white">
-                    {/* we use Link-Tag instead of "a" */}
-                    <NavLink exact="true" to={`/destination`}>01 DESTINATION</NavLink>
+                    {/* I put here directly the first page of my details */}
+                    <NavLink exact="true" to={`/details/0`}>01 DESTINATION</NavLink>
                 </li>
                 <li className="hover:text-[#808080] text-white">
                     <NavLink exact="true" to={`/crew`}>02 CREW</NavLink>
