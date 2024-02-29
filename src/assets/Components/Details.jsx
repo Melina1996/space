@@ -13,11 +13,11 @@ export default function Details() {
     //select respective Object in my Data JSON with the ID above
     const planet = Data.destinations[id]
 
-
-    // const imagePath = new URL(
-    //     ../../assets/image/${images},
-    //     import.meta.url
-    //   ).href;
+    const imagePath = new URL(
+        //image path starts from HERE
+        `../img/${planet.images.png}`,
+        import.meta.url
+      ).href;
 
 
   return (
@@ -26,24 +26,30 @@ export default function Details() {
 
         <Navbar />
 
-        <div className='flex items-center'>
+        <div className='flex items-center justify-center'>
 
-            <div className='w-[50%]'>
+            <div className='w-[50%] flex flex-col justify-center items-center'>
 
-                <h1 className='text-[25px] text-white'><span className='text-[#808080]'>01</span> PICK YOUR DESTINATION</h1>
+                <div className='flex flex-col flex-start gap-10'>
 
-                <img src={                 
-                    new URL(`../assets/img/destination/${planet.images.png}`, import.meta.url)
-                      .href
-                  } className='w-[40px] h-[40px]' alt="" />
+                    <h1 className='text-[25px] text-white'><span className='text-[#808080]'>01</span> PICK YOUR DESTINATION</h1>
+
+                    <img src={imagePath} className='w-[400px] h-[400px]' alt="" />
+
+                </div>
 
             </div>
 
             <div className='w-[50%] justify-start items-center pr-32 pl-28 text-white'>
 
-                <NavDestinations />
+                <div className='h-[180px]'>
 
-                <h1 className='text-[100px]'>{planet.name.toUpperCase()}</h1>
+                    <NavDestinations />
+
+                    <h1 className='text-[100px]'>{planet.name.toUpperCase()}</h1>
+
+                </div>
+                
 
                 <p>{planet.description}</p>
 
@@ -54,6 +60,8 @@ export default function Details() {
                     <p className='text-[13px]'>EST. TRAVEL TIME</p>
 
                     <p className='text-[20px]'>{planet.travel.toUpperCase()}</p>
+
+                    <p>{planet.images.type}</p>
 
                 </div>
 
