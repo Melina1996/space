@@ -9,7 +9,7 @@ export default function NavDestinations() {
   return (
     <div>
 
-        <nav id="nav-destination" className='flex justify-start items-center gap-10'>
+        <nav id="nav-destination" className='flex max-[426px]:justify-center max-[426px]:items-center md:justify-start lg:gap-10 gap-5'>
                 {Data.destinations.map((element, id) => {
                     return (
                         <div key={id}>

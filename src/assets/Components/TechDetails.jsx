@@ -5,24 +5,24 @@ export default function TechDetails(props) {
 
 
   return (
-    <div className='flex w-[100%] justify-center items-center'>
+    <div className='flex max-[426px]:flex-col md:flex-row w-[100%] justify-center items-center max-[426px]:gap-4'>
 
-        <div className='flex justify-center items-center w-[50%]'>
+        <div className='flex justify-center items-center lg:w-[50%] md:w-[60%]'>
 
-            <div className='flex flex-col w-[80%]'>
+            <div className='flex flex-col xl:w-[80%] md:w-[90%] max-[426px]:text-center max-[426px]:pt-5 max-[426px]:gap-4 max-[426px]:w-[95%]'>
 
                 <p className='text-white font-barlow'>THE TERMINOLOGY...</p>
 
-                <h1 className='text-[45px] font-nanum text-white'>{props.name.toUpperCase()}</h1>
+                <h1 className='xl:text-[45px] lg:text-[38px] md:text-[35px] text-[30px] font-nanum text-white'>{props.name.toUpperCase()}</h1>
 
-                <p className='pt-10'>{props.description}</p>
+                <p className='lg:pt-8 md:pt-4'>{props.description}</p>
 
             </div>
 
 
         </div>
 
-        <div className='flex w-[50%] justify-end items-end'>
+        <div className='flex lg:w-[50%] md:w-[40%] md:justify-end max-[426px]:justify-center items-end max-[426px]:pb-10'>
 
             <img src={props.img} alt="" className='w-[80%]' />
 

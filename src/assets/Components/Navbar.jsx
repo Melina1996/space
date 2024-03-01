@@ -12,9 +12,9 @@ export default function Navbar() {
     const[burger,setBurger]=useState(false)
 
   return (
-    <div className='flex justify-between items-center md:h-[150px] h-[100px] pl-10 font-barlow lg:text-lg relative'>
+    <div className='flex justify-between items-center pl-10 font-barlow lg:text-lg relative'>
 
-        <img src={Star} className='w-[50px] h-[50px] md:w-[40px] md:h-[40px]' alt="star"/>
+        <img src={Star} className='w-[50px] h-[50px] md:w-[40px] md:h-[40px] max-[426px]:absolute max-[426px]:top-7' alt="star"/>
 
         <hr className="xl:w-[380px] lg:w-[270px] md:w-[150px] h-[2px] mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-white"/>
 
@@ -47,7 +47,7 @@ export default function Navbar() {
         {
             burger ? 
             
-            <div className='absolute w-[100%] bg-white h-[400px] top-0 flex justify-center'>
+            <div className='absolute w-[100%] bg-white h-[400px] top-0 left-0 flex justify-center'>
 
                 <BurgerMenu setBurger={setBurger}/> 
 

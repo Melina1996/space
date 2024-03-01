@@ -15,7 +15,7 @@ export default function Technology() {
 
   return (
 
-    <div className='bg-bgTech bg-cover w-[100vw] h-[100vh]'>
+    <div className='bg-bgTech bg-cover w-[100vw] md:h-[100vh]'>
 
 
         <div className='h-[20%]'>
@@ -26,25 +26,25 @@ export default function Technology() {
 
         <div className='h-[10%] flex justify-center items-center'>
 
-            <div className='w-[80%] flex justify-start items-center'>
+            <div className='w-[80%] flex max-[426px]:justify-center md:justify-start items-center'>
 
-                <h1 className='text-[28px] text-white font-barlow tracking-widest'><span className='text-[#808080]'>03</span> SPACE LAUNCH 101</h1>
+                <h1 className='xl:text-[28px] lg:text-[24px] text-[20px] text-white font-barlow tracking-widest max-[426px]:pt-20'><span className='text-[#808080]'>03</span> SPACE LAUNCH 101</h1>
 
             </div>
 
         </div>
 
-        <div className='h-[70%] flex items-center justify-center'>
+        <div className='h-[70%] flex flex-col md:flex-row items-center justify-center'>
 
-            <div className='w-[15%] flex justify-end items-center'>
+            <div className='md:w-[15%] max-[426px]:w-[80%] flex md:justify-end max-[426px]:justify-center items-center max-[426px]:pt-10'>
 
-                <div className='flex flex-col items-start gap-5'>
+                <div className='flex md:flex-col max-[426px]:flex-row md:items-start max-[426px]:items-center gap-5'>
 
-                        <button onClick={()=>setButton(1)} className={`${buttonClicked == "1" ? ("text-black bg-white") : ("bg-none text-white")} w-[80px] h-[80px] rounded-full border-white border-2 border-solid first-letter:font-semibold text-xl`}><p>1</p></button>
+                        <button onClick={()=>setButton(1)} className={`${buttonClicked == "1" ? ("text-black bg-white") : ("bg-none text-white")} xl:w-[80px] xl:h-[80px] w-[65px] h-[65px] rounded-full border-white border-2 border-solid first-letter:font-semibold text-xl`}><p>1</p></button>
 
-                        <button onClick={()=>setButton(2)} className={`${buttonClicked == "2" ? ("text-black bg-white") : ("bg-none text-white")} w-[80px] h-[80px] rounded-full border-white border-2 border-solid first-letter:font-semibold text-xl`}><p>2</p></button>
+                        <button onClick={()=>setButton(2)} className={`${buttonClicked == "2" ? ("text-black bg-white") : ("bg-none text-white")} xl:w-[80px] xl:h-[80px] w-[65px] h-[65px] rounded-full border-white border-2 border-solid first-letter:font-semibold text-xl`}><p>2</p></button>
 
-                        <button onClick={()=>setButton(3)} className={`${buttonClicked == "3" ? ("text-black bg-white") : ("bg-none text-white")} w-[80px] h-[80px] rounded-full border-white border-2 border-solid first-letter:font-semibold text-xl`}><p>3</p></button>
+                        <button onClick={()=>setButton(3)} className={`${buttonClicked == "3" ? ("text-black bg-white") : ("bg-none text-white")} xl:w-[80px] xl:h-[80px] w-[65px] h-[65px] rounded-full border-white border-2 border-solid first-letter:font-semibold text-xl`}><p>3</p></button>
 
                 </div>
 

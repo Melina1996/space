@@ -26,7 +26,9 @@ export default {
       barlow: ["Barlow Semi Condensed","sans-serif"]
 
     }
+    
   },
   },
   plugins: [require("daisyui",'flowbite/plugin')],
+  
 }
