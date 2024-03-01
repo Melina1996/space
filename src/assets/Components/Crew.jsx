@@ -17,7 +17,7 @@ export default function Crew() {
 
   return (
 
-    <div className='bg-bgCrew bg-cover w-[100vw] md:h-[100vh]'>
+    <div className='lg:bg-bgCrew md:bg-crewTablet bg-crewMobile bg-cover w-[100vw] md:h-[100vh]'>
                 
         <div className='h-[20%]'>
 

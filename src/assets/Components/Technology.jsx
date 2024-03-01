@@ -15,7 +15,7 @@ export default function Technology() {
 
   return (
 
-    <div className='bg-bgTech bg-cover w-[100vw] md:h-[100vh]'>
+    <div className='lg:bg-bgTech md:bg-techTablet bg-techMobile bg-cover w-[100vw] md:h-[100vh]'>
 
 
         <div className='h-[20%]'>

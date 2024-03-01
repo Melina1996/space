@@ -12,7 +12,7 @@ export default function Navbar() {
     const[burger,setBurger]=useState(false)
 
   return (
-    <div className='flex justify-between items-center pl-10 font-barlow lg:text-lg relative'>
+    <div className='flex justify-between items-center pl-10 font-barlow lg:text-lg relative pt-5'>
 
         <img src={Star} className='w-[50px] h-[50px] md:w-[40px] md:h-[40px] max-[426px]:absolute max-[426px]:top-7' alt="star"/>
 
@@ -24,7 +24,7 @@ export default function Navbar() {
                 <ul className="flex gap-12 justify-center items-center">
                 <li className="hover:text-[#808080] text-white">
                     {/* we use Link-Tag instead of "a" */}
-                    <NavLink exact="true" to={`/`}>00 HOME</NavLink>
+                    <NavLink exact="true" to={`/space`}>00 HOME</NavLink>
                 </li>
                 <li className="hover:text-[#808080] text-white">
                     {/* I put here directly the first page of my details */}

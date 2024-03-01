@@ -11,7 +11,7 @@ export default function BurgerMenu(props) {
                 <ul className="flex flex-col gap-12 justify-center items-center">
                 <li className="hover:text-[#808080] text-black">
                     {/* we use Link-Tag instead of "a" */}
-                    <NavLink exact="true" to={`/`}>00 HOME</NavLink>
+                    <NavLink exact="true" to={`/space`}>00 HOME</NavLink>
                 </li>
                 <li className="hover:text-[#808080] text-black">
                     {/* I put here directly the first page of my details */}

@@ -22,7 +22,7 @@ export default function Details() {
 
   return (
 
-    <div className='bg-bgDestination bg-cover w-[100vw] md:h-[100vh]'>
+    <div className='lg:bg-bgDestination md:bg-destinationTablet bg-destinationMobile bg-cover w-[100vw] md:h-[100vh]'>
 
         <div className='md:h-[20%]'>
 

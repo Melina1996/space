@@ -15,7 +15,7 @@ import Details from "./assets/Components/Details";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/space",
     element: <Home />,
   },
   {
