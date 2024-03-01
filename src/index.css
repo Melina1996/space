@@ -26,3 +26,11 @@ body {
   padding-bottom: 5px;
 }
 
+#my-nav a:hover {
+  border-bottom-width: 4px;
+  padding-bottom: 33px;
+  border-color: black;
+}
+
+
+

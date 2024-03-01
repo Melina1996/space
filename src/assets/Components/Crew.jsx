@@ -45,8 +45,8 @@ export default function Crew() {
                     <div className='xl:w-[58%] lg:w-[62%] md:w-[68%] w-[100%] flex justify-center items-center gap-5'>
 
                         <button onClick={()=> setBullet("Douglas")} className={`${clickBullet == "Douglas" ? "bg-white" : "bg-[#808080]"} rounded-full xl:w-[18px] xl:h-[18px] w-[15px] h-[15px]`}></button>
-                        <button onClick={()=> setBullet("Mark")} className={`${clickBullet == "Mark" ? "bg-white" : "bg-[#808080]"} rounded-full w-[15px] h-[15px]`}></button>                    
-                        <button onClick={()=> setBullet("Victor")} className={`${clickBullet == "Victor" ? "bg-white" : "bg-[#808080]"} rounded-full w-[15px] h-[15px]`}></button>                    <button onClick={()=> setBullet("Anousheh")} className={`${clickBullet == "Anousheh" ? "bg-white" : "bg-[#808080]"} rounded-full w-[15px] h-[15px]`}></button>
+                        <button onClick={()=> setBullet("Mark")} className={`${clickBullet == "Mark" ? "bg-white" : "bg-[#808080]"} rounded-full xl:w-[18px] xl:h-[18px] w-[15px] h-[15px]`}></button>                    
+                        <button onClick={()=> setBullet("Victor")} className={`${clickBullet == "Victor" ? "bg-white" : "bg-[#808080]"} rounded-full xl:w-[18px] xl:h-[18px] w-[15px] h-[15px]`}></button>                    <button onClick={()=> setBullet("Anousheh")} className={`${clickBullet == "Anousheh" ? "bg-white" : "bg-[#808080]"} rounded-full xl:w-[18px] xl:h-[18px] w-[15px] h-[15px]`}></button>
 
                     </div>
                 </div>

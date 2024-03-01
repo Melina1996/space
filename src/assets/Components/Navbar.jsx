@@ -22,18 +22,18 @@ export default function Navbar() {
         <div className='xl:w-[900px] lg:w-[600px] md:w-[500px] nav-bg pt-8 pb-8 relative hidden md:block shadow-lg'>
             <nav id="my-nav">
                 <ul className="flex gap-12 justify-center items-center">
-                <li className="hover:text-[#808080] text-white">
+                <li className="hover:text-black text-white">
                     {/* we use Link-Tag instead of "a" */}
                     <NavLink exact="true" to={`/space`}>00 HOME</NavLink>
                 </li>
-                <li className="hover:text-[#808080] text-white">
+                <li className="hover:text-black text-white">
                     {/* I put here directly the first page of my details */}
                     <NavLink exact="true" to={`/details/0`}>01 DESTINATION</NavLink>
                 </li>
-                <li className="hover:text-[#808080] text-white">
+                <li className="hover:text-black text-white">
                     <NavLink exact="true" to={`/crew`}>02 CREW</NavLink>
                 </li>
-                <li className="hover:text-[#808080] text-white">
+                <li className="hover:text-black text-white">
                     <NavLink exact="true" to={`/technology`}>03 TECHNOLOGY</NavLink>
                 </li>
                 </ul>
