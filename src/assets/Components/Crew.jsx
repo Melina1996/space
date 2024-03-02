@@ -1,43 +1,107 @@
-import React from 'react'
-import { useState } from "react"
-import { Carousel } from 'flowbite-react';
-import Data from "../JSON/data.json"
+import React from "react";
+import { useState } from "react";
+import { Carousel } from "flowbite-react";
+import Data from "../JSON/data.json";
 
-import Navbar from './Navbar'
-import CrewDetails from './CrewDetails';
+import Navbar from "./Navbar";
+import CrewDetails from "./CrewDetails";
 
-import Douglas from "../img/image-douglas-hurley.png"
-import Anousheh from "../img/image-anousheh-ansari.png"
-import Mark from "../img/image-mark-shuttleworth.png"
-import Victor from "../img/image-victor-glover.png"
+import Douglas from "../img/image-douglas-hurley.png";
+import Anousheh from "../img/image-anousheh-ansari.png";
+import Mark from "../img/image-mark-shuttleworth.png";
+import Victor from "../img/image-victor-glover.png";
 
 export default function Crew() {
+  const [clickBullet, setBullet] = useState("Douglas");
 
-    const[clickBullet,setBullet]=useState("Douglas")
+  //useState muss per default auf "0" stehen
+  let [current, setCurrent] = useState(0);
+
+  function previousSlide() {
+    if (current === 0) setCurrent(Data.crew.length - 1);
+    else setCurrent(current - 1);
+  }
+
+  function nextSlide() {
+    if (current === Data.crew.length - 1) setCurrent(0);
+    else setCurrent(current + 1);
+  }
 
   return (
+    <div className="lg:bg-bgCrew md:bg-crewTablet bg-crewMobile bg-cover bg-center w-[100vw] md:h-[100vh]">
+      <div className="h-[20%]">
+        <Navbar />
+      </div>
 
-    <div className='lg:bg-bgCrew md:bg-crewTablet bg-crewMobile bg-cover bg-center w-[100vw] md:h-[100vh]'>
-                
-        <div className='h-[20%]'>
-
-            <Navbar />
-
+      <div className="h-[10%] flex justify-center items-center">
+        <div className="w-[80%] flex max-[426px]:justify-center items-center">
+          <h1 className="xl:text-[28px] lg:text-[24px] text-[20px] text-white font-barlow tracking-widest max-[426px]:pt-16">
+            <span className="text-[#808080]">02</span> MEET YOUR CREW
+          </h1>
         </div>
+      </div>
 
-        <div className='h-[10%] flex justify-center items-center'>
+      <div className="w-[100%] h-[70%] flex md:flex-row flex-col justify-center items-center">
+        {/* <div
+          className="flex transition ease-out duration-100"
+          style={{
+            transform: `translateX(-${current * 100}%)`,
+          }}
+        > */}
+          {/* muss hier einen key an jedes Element(img) meines Arrays geben, da react eine id braucht */}
+          {/* Problem: sobald ich div in mein return einfüge, dann passt sich die der Seitenbreite an */}
 
-            <div className='w-[80%] flex max-[426px]:justify-center items-center'>
+          {/* {Data.crew.map((element, id) => {
+            return (
+              <img
+                className="rounded object-cover"
+                src={
+                  new URL(
+                    //image path starts from HERE
+                    `../img/${element.images.png}`,
+                    import.meta.url
+                  ).href
+                }
+                alt=""
+              />
+            );
+          })}
+        </div> */}
+{/* 
+        <div className="absolute top-0 h-full w-full flex justify-between items-center px-10">
+          <button onClick={previousSlide}>
+            <img
+              className="w-[40px] h-[40px]"
+              src="./../../assets/img/previous.png"
+              alt=""
+            />
+          </button>
+          <button onClick={nextSlide}>
+            <img
+              className="w-[40px] h-[40px]"
+              src="./../../assets/img/next.png"
+              alt=""
+            />
+          </button>
+        </div> */}
 
-                <h1 className='xl:text-[28px] lg:text-[24px] text-[20px] text-white font-barlow tracking-widest max-[426px]:pt-16'><span className='text-[#808080]'>02</span> MEET YOUR CREW</h1>
+        {/* <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
+          {Data.crew.map((element, id) => {
+            console.log(element);
+            return (
+              // mit tertinary condition: bg-color verändert sich wenn Slide aktiv
+              <div
+                onClick={() => setCurrent(id)}
+                id={"circle" + 1}
+                className={`rounded-full w-5 h-5 bg-white cursor-pointer ${
+                  id == current ? "bg-white" : "bg-black"
+                }`}
+              ></div>
+            );
+          })}
+        </div> */}
 
-            </div>
-
-        </div>
-
-        <div className='w-[100%] h-[70%] flex max-[426px]:flex-col justify-center items-center'>
-
-            <div className='md:w-[50%] w-[100%] flex flex-col justify-start items-center gap-10'>
+        <div className='md:w-[50%] w-[100%] flex flex-col justify-start items-center gap-10'>
 
                 <CrewDetails name={clickBullet == "Douglas" ? Data.crew[0].name : clickBullet == "Mark" ? Data.crew[1].name : clickBullet == "Victor" ? Data.crew[2].name : clickBullet == "Anousheh" ? Data.crew[3].name : ""} role={clickBullet == "Douglas" ? Data.crew[0].role : clickBullet == "Mark" ? Data.crew[1].role : clickBullet == "Victor" ? Data.crew[2].role : clickBullet == "Anousheh" ? Data.crew[3].role : ""} bio={clickBullet == "Douglas" ? Data.crew[0].bio : clickBullet == "Mark" ? Data.crew[1].bio : clickBullet == "Victor" ? Data.crew[2].bio : clickBullet == "Anousheh" ? Data.crew[3].bio : ""}/>
 
@@ -58,12 +122,9 @@ export default function Crew() {
                 <img className="xl:w-[53%] xl:h-[53%] lg:w-[65%] lg:h-[65%] w-[70%] h-[70%] md:pl-10 xl:pl-0" src={clickBullet == "Douglas" ? Douglas : clickBullet == "Mark" ? Mark : clickBullet == "Victor" ? Victor : clickBullet == "Anousheh" ? Anousheh : ""} alt="" />
 
             </div>
+      </div>
 
-
-        </div>
-
-        
-{/* 
+      {/* 
         <div className="h-[600px] pb-10">
 
             <Carousel slide={false} leftControl=" " rightControl=" " className='wrapper'>
@@ -97,9 +158,6 @@ export default function Crew() {
                     );
                 })}
             </Carousel> */}
-    
-        </div>
-
-
-  )
+    </div>
+  );
 }
