@@ -63,7 +63,7 @@ export default function Details() {
                 </div>
                 
 
-                <p className='xl:h-[120px] md:h-[100px] md:p-0 p-4 max-[426px]:text-center'>{planet.description}</p>
+                <p className='xl:h-[120px] md:h-[100px] md:p-0 p-4 max-[426px]:text-center leading-6 lg:text-[18px] text-[15px]'>{planet.description}</p>
 
                 <hr className="w-[100%] h-[2px] mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-white"/>
 

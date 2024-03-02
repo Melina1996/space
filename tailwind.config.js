@@ -36,6 +36,10 @@ export default {
         '100%': { transform: 'scaleY(0)' },
       }
     }, 
+    animation: {
+      scale: 'scale 1s ease',
+      scaleBack: 'scaleBack 1s ease',
+    },
   },
   },
   plugins: [require("daisyui",'flowbite/plugin')],

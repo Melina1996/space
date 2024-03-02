@@ -6,7 +6,12 @@ body {
   margin: 0;
 }
 
+/* in order to put opacity low on ONLY bg, not text */
 .nav-bg{
+  background: rgba(255,255,255,0.1);
+}
+
+.pBg{
   background: rgba(255,255,255,0.1);
 }
 
@@ -36,7 +41,6 @@ body {
 .myBurgerMenu{
   transform-origin: top;
 }
-
 
 /* to make close-btn spin */
 
