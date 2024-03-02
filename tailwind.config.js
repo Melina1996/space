@@ -25,8 +25,17 @@ export default {
       nanum: ["Nanum Myeongjo","serif"],
       barlow: ["Barlow Semi Condensed","sans-serif"]
 
-    }
-    
+    },
+    keyframes: {
+      scale: {
+        '0%': { transform: 'scaleY(0)' },
+        '100%': { transform: 'scaleY(1)' },
+      },
+      scaleBack:{
+        '0%': { transform: 'scaleY(1)' },
+        '100%': { transform: 'scaleY(0)' },
+      }
+    }, 
   },
   },
   plugins: [require("daisyui",'flowbite/plugin')],

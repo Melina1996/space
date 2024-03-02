@@ -32,5 +32,21 @@ body {
   border-color: black;
 }
 
+/* to make sure that the menu scales from the top */
+.myBurgerMenu{
+  transform-origin: top;
+}
+
+
+/* to make close-btn spin */
+
+.myClose{
+  transition: transform .7s ease-in-out;
+}
+
+.myClose:hover {
+  transform: rotate(360deg);
+}
+
 
 

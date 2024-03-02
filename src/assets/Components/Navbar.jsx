@@ -47,7 +47,7 @@ export default function Navbar() {
         {
             burger ? 
             
-            <div className='absolute w-[100%] bg-white h-[400px] top-0 left-0 flex justify-center'>
+            <div className={`absolute w-[100%] bg-white h-[400px] top-0 left-0 flex justify-center ${burger ? "animate-scale" : ""}  myBurgerMenu`}>
 
                 <BurgerMenu setBurger={setBurger}/> 
 

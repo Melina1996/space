@@ -27,7 +27,7 @@ export default function BurgerMenu(props) {
 
             </nav>
 
-        <button onClick={()=> props.setBurger(false)}><img src={Close} className='absolute top-5 right-5' alt="" /></button>
+        <button onClick={()=> props.setBurger(false)}><img src={Close} className='absolute top-5 right-5 myClose' alt="" /></button>
 
     </div>
   )
