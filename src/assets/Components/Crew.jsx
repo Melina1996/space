@@ -29,7 +29,6 @@ export default function Crew() {
 
   return (
     <div className="lg:bg-bgCrew md:bg-crewTablet bg-crewMobile bg-cover bg-center w-[100vw] md:h-[100vh] relative">
-      
       <div className="h-[20%]">
         <Navbar />
       </div>
@@ -42,41 +41,40 @@ export default function Crew() {
         </div>
       </div>
 
+      {/* w-auto to make the div adapt itself to its content and not the other way round (in this case 4*100%), all the different "slides/divs" will display within this limit, but each of them should bring the whole screen  */}
       <div className="w-auto h-[70%] flex flex-wrap flex-col justify-center items-center overflow-hidden">
-        
         <div
           className="flex transition ease-out duration-100"
           style={{
-            //each div has an index and all the divs together make the 100%, so each div's index * 25% makes each div appear 
+            //current represents the index of each slide/div (0-3). Each takes 25% so in total I get 100%, so one full round/turn.
             transform: `translateX(-${current * 25}%)`,
           }}
         >
-
           {Data.crew.map((element, id) => {
             return (
               //each div takes the width of the whole screen
               <div className="flex md:flex-row flex-col w-screen">
-
                 <div className="md:w-[50%] max-[426px]:w-[100%] flex justify-center items-center">
-                  <CrewDetails role={element.role} bio={element.bio} name={element.name}/>
+                  <CrewDetails
+                    role={element.role}
+                    bio={element.bio}
+                    name={element.name}
+                  />
                 </div>
 
                 <div className="w-[50%] md:w-[50%] max-[426px]:w-[100%] flex justify-center items-center max-[426px]:pb-20 max-[426px]:pt-10">
-
-                <img
-                className="rounded md:w-[50%] max-[426px]:w-[60%]"
-                src={
-                  new URL(
-                    //image path starts from HERE
-                    `../img/${element.images.png}`,
-                    import.meta.url
-                  ).href
-                }
-                alt=""
-              />
-
+                  <img
+                    className="rounded md:w-[50%] max-[426px]:w-[60%]"
+                    src={
+                      new URL(
+                        //image path starts from HERE
+                        `../img/${element.images.png}`,
+                        import.meta.url
+                      ).href
+                    }
+                    alt=""
+                  />
                 </div>
-
               </div>
             );
           })}
@@ -122,7 +120,6 @@ export default function Crew() {
             </div> */}
       </div>
 
-      
       {/* if want to use FlowBite-Carousel */}
       {/* 
         <div className="h-[600px] pb-10">
