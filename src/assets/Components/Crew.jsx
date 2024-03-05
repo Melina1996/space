@@ -28,7 +28,8 @@ export default function Crew() {
   }
 
   return (
-    <div className="lg:bg-bgCrew md:bg-crewTablet bg-crewMobile bg-cover bg-center w-[100vw] md:h-[100vh]">
+    <div className="lg:bg-bgCrew md:bg-crewTablet bg-crewMobile bg-cover bg-center w-[100vw] md:h-[100vh] relative">
+      
       <div className="h-[20%]">
         <Navbar />
       </div>
@@ -41,20 +42,29 @@ export default function Crew() {
         </div>
       </div>
 
-      <div className="w-[100%] h-[70%] flex md:flex-row flex-col justify-center items-center">
-        {/* <div
+      <div className="w-auto h-[70%] flex flex-wrap flex-col justify-center items-center overflow-hidden">
+        
+        <div
           className="flex transition ease-out duration-100"
           style={{
-            transform: `translateX(-${current * 100}%)`,
+            //each div has an index and all the divs together make the 100%, so each div's index * 25% makes each div appear 
+            transform: `translateX(-${current * 25}%)`,
           }}
-        > */}
-          {/* muss hier einen key an jedes Element(img) meines Arrays geben, da react eine id braucht */}
-          {/* Problem: sobald ich div in mein return einfüge, dann passt sich die der Seitenbreite an */}
+        >
 
-          {/* {Data.crew.map((element, id) => {
+          {Data.crew.map((element, id) => {
             return (
-              <img
-                className="rounded object-cover"
+              //each div takes the width of the whole screen
+              <div className="flex md:flex-row flex-col w-screen">
+
+                <div className="md:w-[50%] max-[426px]:w-[100%] flex justify-center items-center">
+                  <CrewDetails role={element.role} bio={element.bio} name={element.name}/>
+                </div>
+
+                <div className="w-[50%] md:w-[50%] max-[426px]:w-[100%] flex justify-center items-center max-[426px]:pb-20 max-[426px]:pt-10">
+
+                <img
+                className="rounded md:w-[50%] max-[426px]:w-[60%]"
                 src={
                   new URL(
                     //image path starts from HERE
@@ -64,44 +74,32 @@ export default function Crew() {
                 }
                 alt=""
               />
+
+                </div>
+
+              </div>
             );
           })}
-        </div> */}
-{/* 
-        <div className="absolute top-0 h-full w-full flex justify-between items-center px-10">
-          <button onClick={previousSlide}>
-            <img
-              className="w-[40px] h-[40px]"
-              src="./../../assets/img/previous.png"
-              alt=""
-            />
-          </button>
-          <button onClick={nextSlide}>
-            <img
-              className="w-[40px] h-[40px]"
-              src="./../../assets/img/next.png"
-              alt=""
-            />
-          </button>
-        </div> */}
+        </div>
 
-        {/* <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
+        <div className="absolute xl:bottom-16 bottom-10 flex md:justify-start max-[426px]:justify-center xl:pl-36 lg:pl-24 md:pl-[75px] gap-3 w-full">
           {Data.crew.map((element, id) => {
             console.log(element);
             return (
-              // mit tertinary condition: bg-color verändert sich wenn Slide aktiv
+              //tertinary condition: bg-color changes when slide active -> current is == id
               <div
                 onClick={() => setCurrent(id)}
                 id={"circle" + 1}
-                className={`rounded-full w-5 h-5 bg-white cursor-pointer ${
-                  id == current ? "bg-white" : "bg-black"
+                className={`rounded-full w-5 h-5 cursor-pointer ${
+                  id == current ? "bg-white" : "bg-[#808080]"
                 }`}
               ></div>
             );
           })}
-        </div> */}
+        </div>
 
-        <div className='md:w-[50%] w-[100%] flex flex-col justify-start items-center gap-10'>
+        {/* wenn mit Slug machen möchte: */}
+        {/* <div className='md:w-[50%] w-[100%] flex flex-col justify-start items-center gap-10'>
 
                 <CrewDetails name={clickBullet == "Douglas" ? Data.crew[0].name : clickBullet == "Mark" ? Data.crew[1].name : clickBullet == "Victor" ? Data.crew[2].name : clickBullet == "Anousheh" ? Data.crew[3].name : ""} role={clickBullet == "Douglas" ? Data.crew[0].role : clickBullet == "Mark" ? Data.crew[1].role : clickBullet == "Victor" ? Data.crew[2].role : clickBullet == "Anousheh" ? Data.crew[3].role : ""} bio={clickBullet == "Douglas" ? Data.crew[0].bio : clickBullet == "Mark" ? Data.crew[1].bio : clickBullet == "Victor" ? Data.crew[2].bio : clickBullet == "Anousheh" ? Data.crew[3].bio : ""}/>
 
@@ -121,9 +119,11 @@ export default function Crew() {
 
                 <img className="xl:w-[53%] xl:h-[53%] lg:w-[65%] lg:h-[65%] w-[70%] h-[70%] md:pl-10 xl:pl-0" src={clickBullet == "Douglas" ? Douglas : clickBullet == "Mark" ? Mark : clickBullet == "Victor" ? Victor : clickBullet == "Anousheh" ? Anousheh : ""} alt="" />
 
-            </div>
+            </div> */}
       </div>
 
+      
+      {/* if want to use FlowBite-Carousel */}
       {/* 
         <div className="h-[600px] pb-10">
 

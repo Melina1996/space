@@ -31,14 +31,9 @@ export default {
         '0%': { transform: 'scaleY(0)' },
         '100%': { transform: 'scaleY(1)' },
       },
-      scaleBack:{
-        '0%': { transform: 'scaleY(1)' },
-        '100%': { transform: 'scaleY(0)' },
-      }
     }, 
     animation: {
       scale: 'scale 1s ease',
-      scaleBack: 'scaleBack 1s ease',
     },
   },
   },

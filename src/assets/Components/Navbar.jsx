@@ -47,13 +47,19 @@ export default function Navbar() {
         {
             burger ? 
             
-            <div className={`absolute w-[100%] bg-white h-[400px] top-0 left-0 flex justify-center animate-scale myBurgerMenu`}>
+            <div className={`absolute w-[100%] bg-white h-[400px] top-0 left-0 flex justify-center scale-y-[100%] duration-700 placeholder:transition-all myBurgerMenu`}>
 
                 <BurgerMenu setBurger={setBurger}/> 
 
             </div>
 
-            : ""
+            : 
+            //in order to apply transition as well when closing the menu, I need to show it again here and then scale Y to 0
+            <div className={`absolute w-[100%] bg-white h-[400px] top-0 left-0 flex justify-center scale-y-[0%] duration-700 transition-all myBurgerMenu`}>
+
+            <BurgerMenu setBurger={setBurger}/> 
+
+        </div>
 
 
         }

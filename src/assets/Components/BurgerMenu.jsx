@@ -5,7 +5,7 @@ import Close from "../img/icon-close.svg"
 
 export default function BurgerMenu(props) {
   return (
-    <div className='relative flex justify-center items-center w-[100%]'>
+    <div className='relative flex justify-center items-center w-[100%] z-20'>
 
             <nav id="my-nav-burger">
                 <ul className="flex flex-col gap-12 justify-center items-center">
